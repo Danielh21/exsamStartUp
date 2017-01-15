@@ -1,11 +1,13 @@
-var app = angular.module("app", []);
+var app = angular.module("app", []); // Include ["ngRoute"] in param if needed!
 
 
-app.controller("indexCtrl", function ($http) {
+app.controller("indexCtrl", function (fac, $http) {
 
     var self = this;
 
-    self.hello = "Hello World";
+    self.hello = fac.getData();
+    
+    
 //   self.rest = rest;
 //   
 //   self.rest();
