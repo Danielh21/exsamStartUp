@@ -1,8 +1,9 @@
 angular.module('app')
         .factory("fac", fac);
 
+fac.$inject = ['$http'];
 
-function fac(){
+function fac($http){
     
     var service ={
       getData: getData  
